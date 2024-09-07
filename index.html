@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="content-grid" >
+
+
+
+
+    <h1 class="header" > Remove any <span style="text-decoration: underline;" id="typeeffect" >word</span> From the Text</h1>
+        
+        <div class="finder flexF" >
+           <p class="findertxtp" > Find this in the text:</p>
+            <input class="finderinp" id="rep1inp" type="text">
+           <p class="findertxtp"> and replace it with:</p>
+            <input class="finderinp" id="rep2inp" type="text">
+            <button id="replace" class="replacebtn" >Replace</button>
+        </div>
+
+
+         
+
+        
+    <textarea class="inputtext" name="textarea" id="textarea"></textarea>
+
+    <p class="charshower" >Characters: <span id="char_id" >0</span> / Words: <span id="words_id" >0</span> / Lines: <span id="line_id" >0</span></p>
+
+
+    <div class="grid_btn" >
+        <button class="btn" style="background-color: rgb(22, 193, 73);" id="Copy">Copy Text</button>
+        <button class="btn" style="background-color: rgb(193, 30, 22);" id="cleartext">Clear Text</button>
+        <button class="btn" style="background-color: rgb(22, 125, 193);" id="paste" >Paste Text</button>
+        <button class="btn cd" style="background-color: rgb(88, 22, 193);" id="removeemptyline"  >Remove empty line</button>
+    </div>
+
+   
+
+    </main>
+</body>
+</html>
+<script src="script.js" ></script>
+<script src="typeeffect.js" >    </script>

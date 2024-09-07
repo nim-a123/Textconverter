@@ -1,0 +1,286 @@
+body{
+    background-color: rgb(29, 29, 29);
+}
+
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  .flex{
+    justify-content: center;
+    display: flex;
+  
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  .unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+   
+  .content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 900px;
+    --breakout-max-width: 1200px;
+    --breakout-size: calc(
+      (var(--breakout-max-width) - var(--content-max-width)) / 2
+    );
+  
+    display: grid;
+  
+    grid-template-columns:
+      [full-width-start] minmax(var(--padding-inline), 1fr)
+      [breakout-start] minmax(0, var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(0, var(--breakout-size)) [breakout-end]
+      minmax(var(--padding-inline), 1fr) [full-width-end];
+      
+  }
+  
+  .content-grid > :not(.breakout, .full-width),
+  .full-width > :not(.breakout, .full-width) {
+    grid-column: content;
+    
+  }
+  
+  .content-grid > .breakout {
+    
+    grid-column: breakout;
+  }
+  
+  .content-grid > .full-width {
+    grid-column: full-width;
+  
+    display: grid;
+    grid-template-columns: inherit;
+  }
+  
+  img.full-width {
+    width: 100%;
+    max-height: 45vh;
+    object-fit: cover;
+  }
+
+  .header{
+    text-align: center;
+    color: white;
+    text-shadow: 0px 5px 10px rgb(81, 81, 81);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 45px;
+  }
+.finder{
+   padding: 15px;
+    margin-bottom: 0px;
+    
+}
+.findertxtp{
+    color: whitesmoke;
+    font-weight: bolder;
+}
+.flexF{
+    display: flex;
+    justify-content: center;
+}
+.finderinp{
+    width: 75px;
+    height: 25px;
+    margin: auto;
+    margin: 10px;
+    text-align: center;
+    color: rgb(168, 197, 199);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    outline: none;
+}
+
+
+.replacebtn{
+    font-size: medium;
+    height: 3rem;
+    width: 125px;
+    margin-bottom: 25px;  
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    box-shadow: 0px 0px 5px white;
+    outline: none;
+    margin-inline: 30px;
+}
+  .inputtext{
+    margin: auto;
+    width: 95%;
+    height: 350px;
+    min-height: 20vh;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(196, 196, 196, 0.71);
+    background: rgba(49, 49, 49, 0.52);
+    font: inherit;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    outline: none;
+    box-shadow: 0px 0px 10px rgb(75, 75, 75);
+    resize: vertical;
+    display: block;
+  }
+
+  .charshower{
+    color: rgb(225, 225, 225);
+    padding: 10px;
+    font-weight: bolder;
+    font-size: large;
+    
+  }
+  .btn{
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: medium;
+    box-shadow: 0px 0px  7px rgb(35, 35, 35);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-inline: 5px;
+  }
+  textarea {
+    resize: none;
+  }
+
+  .bb{
+
+  }
+
+
+  @media only screen and (max-width: 700px) {
+    .flexF{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      
+  }
+  .replacebtn{
+    margin: 0;
+    margin: auto;
+
+  }
+  }
+  @media only screen and (max-width: 550px) {
+    .flexF{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 2fr;
+      grid-column-gap: 0px;
+      grid-row-gap:5px;
+      margin-bottom: 15px;
+      
+  }
+  .replacebtn{
+    grid-column: 1 / span 2;
+    margin: 0;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+
+  }
+  .finderinp{
+    width: 100px;
+  }
+  }
+  @media only screen and (max-width: 365px) {
+    .flexF{
+      width: 100%;
+     
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 4;
+      grid-column-gap: 0px;
+      grid-row-gap:0px;
+      margin-bottom: 15px;
+      margin: auto;
+
+
+      
+  }
+  .replacebtn{
+    grid-column: 1 / span 1;
+    margin: 0;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    margin-top: 15px;
+    height: 35px;
+
+  }
+  .finderinp{
+    width: 30%;
+    margin: auto;
+  }
+.findertxtp{
+  font-size: large;
+text-align: center;
+}
+
+  }
+
+  @media only screen and (max-width: 610px) {
+
+    .grid_btn{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 0px;
+      grid-row-gap:5px;
+      margin-bottom: 15px;
+    }
+
+    .cd{
+      grid-column: 1 / span 4;
+      width: 85%;
+      margin: auto;
+    }
+
+
+}
+@media only screen and (max-width: 415px) {
+
+  .grid_btn{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 4fr;
+    grid-column-gap: 0px;
+    grid-row-gap:5px;
+    margin-bottom: 15px;
+  }
+  .btn{
+    width: 100%;
+  }
+
+  .cd{
+    grid-column: 1 / span 1;
+    width: 100%;
+    margin: auto;
+   margin-left:5px;
+
+  }
+
+
+}
+
+  
